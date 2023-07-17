@@ -17,3 +17,11 @@ Rules are applied to user groups. Addon user groups do not inherit Odoo user gro
 Rules allow or deny access depending on the specified condition (as shown in diagram 1). Also rules have priority field, which is useful for some scenarios. Test result, priority and type of the rule are placed in the dictionary. These dictionaries, in turn, are placed in a list.
 Then, analysing this list, a decision is made as to whether or not to allow access(according to diagram 2).
 
+```mermaid
+flowchart TD
+    A[Начало проверки текущего условия] --> B{Это <br/>запрещающее правило?}
+    B -->|Да| C{Дополнительные параметры<br/> вызова существуют?}
+    C -->|Да| D{Проверять условие <br/>методом RegEx match?}
+    D -->|Да| G[Точное сравнение шаблона в правиле <br/>с входящим параметром testValue без учёта регистра]
+    D -->|Нет| E[Сравнение шаблона в правиле с входящим параметром testValue <br/>методом search, соответственно в правиле шаблон /поле ruleStrValue/ <br/>должен быть задан с учётом возможностей этого метода.]
+```
