@@ -1,0 +1,32 @@
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="view_tree_acs1crules_users1c_groups">
+		    <field name="model">acs1crules.users1c_groups</field>
+		    <field name="type">tree</field>
+		    <field name="arch" type="xml">
+			<field name="name"/>
+			<field name="users1c_ids" widget="many2many_tags"/>
+		    </field>
+		</record>
+
+		<record id="view_form_acs1crules_users1c_groups" model="ir.ui.view">
+			<field name="model">acs1crules.users1c_groups</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+			    <form>
+				<header>
+				</header>
+				<sheet>
+				    <h1 class="mb32">
+					<field name="name" class="mb16"/>
+				    </h1>
+				    <group>
+					<field name="users1c_ids"  widget="many2many_tags" />
+				    </group>
+				</sheet>
+			    </form>
+			</field>
+		</record>
+	</data>
+</odoo>
+

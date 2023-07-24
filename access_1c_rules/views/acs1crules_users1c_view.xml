@@ -1,0 +1,12 @@
+<odoo>
+    <data>
+	<record model="ir.ui.view" id="view_tree_acs1crules_users">
+	    <field name="model">acs1crules.users1c</field>
+	    <field name="type">tree</field>
+	    <field name="arch" type="xml">
+		<field name="name"/>
+		<field name="id_1c"/>
+	    </field>
+	</record>
+    </data>
+</odoo>

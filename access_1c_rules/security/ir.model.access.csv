@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_acs1crules_user,acs1crules_users,model_acs1crules_usr1crules,base.group_user,1,0,0,0
+access_acs1crules_manager,acs1crules_managers,model_acs1crules_usr1crules,acs1crules_group_manager,1,1,1,1
+access_acs1crules_groups_user,acs1crules_groups_users,model_acs1crules_users1c_groups,base.group_user,1,0,0,0
+access_acs1crules_groups_manager,acs1crules_groups_managers,model_acs1crules_users1c_groups,acs1crules_group_manager,1,1,1,1
+access_acs1crules_users_user,acs1crules_users_users,model_acs1crules_users1c,base.group_user,1,0,0,0
+access_acs1crules_users_manager,acs1crules_users_managers,model_acs1crules_users1c,acs1crules_group_manager,1,1,1,1

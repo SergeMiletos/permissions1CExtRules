@@ -1,0 +1,304 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* access_1c_rules
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-20 18:43+0000\n"
+"PO-Revision-Date: 2023-07-20 18:43+0000\n"
+"Last-Translator: adrmann\n"
+"Language-Team: adrmann\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#. module: access_1c_rules
+#: model:ir.ui.menu,name:access_1c_rules.acs1crules_menu_root
+msgid "1C:Enterprise access rules provider"
+msgstr "Правила доступа для 1С:Предприятие"
+
+#. module: access_1c_rules
+#: model:ir.actions.report,name:access_1c_rules.action_acs1crules_report
+msgid "1C:Enterprise access rules report"
+msgstr "Отчёт о правилах доступа для 1С:Предприятие"
+
+#. module: access_1c_rules
+#: model:res.groups,name:access_1c_rules.acs1crules_group_manager
+msgid "1C:Enterprise permission rules Manager"
+msgstr "Менеджер правил доступа для 1С:Предприятие"
+
+#. module: access_1c_rules
+#: model:res.groups,name:access_1c_rules.acs1crules_group_user
+msgid "1C:Enterprise permission rules Users"
+msgstr "Пользователь правил доступа для 1С:Предприятие"
+
+#. module: access_1c_rules
+#: model:ir.module.category,name:access_1c_rules.module_category_acs1crules
+msgid "1C:Enterprise permissions module category"
+msgstr "Категория модуля правил доступа для 1С:Предприятие"
+
+#. module: access_1c_rules
+#: model:ir.ui.menu,name:access_1c_rules.acs1crules_menu_usersgroups
+msgid "1C:Enterprise user groups"
+msgstr "Группы доступа пользователей 1С:Предприятие"
+
+#. module: access_1c_rules
+#: model:ir.model.fields,field_description:access_1c_rules.field_acs1crules_users1c__name
+msgid "1C:Enterprise user name"
+msgstr "Имя пользователя 1С:Предприятие"
+
+#. module: access_1c_rules
+#: model:ir.model,name:access_1c_rules.model_acs1crules_users1c
+#: model:ir.ui.menu,name:access_1c_rules.acs1crules_menu_users
+msgid "1C:Enterprise users"
+msgstr "Пользователи 1С:Предприятие"
+
+#. module: access_1c_rules
+#: model:ir.actions.act_window,name:access_1c_rules.action_acs1cusers_act_window
+msgid "1C:Enterprise users list"
+msgstr "Список пользователей 1С:Предприятие"
+
+#. module: access_1c_rules
+#: model:ir.model.fields,field_description:access_1c_rules.field_acs1crules_users1c_groups__name
+msgid "Access group name"
+msgstr "Имя группы доступа"
+
+#. module: access_1c_rules
+#: model:ir.model.fields,field_description:access_1c_rules.field_acs1crules_usr1crules__access1CGroup_ids
+#: model_terms:ir.ui.view,arch_db:access_1c_rules.rules1c_structure
+msgid "Access groups"
+msgstr "Группы доступа"
+
+#. module: access_1c_rules
+#: model:ir.model,name:access_1c_rules.model_acs1crules_users1c_groups
+msgid "Access groups of 1C:Enterprise users"
+msgstr "Группы доступа пользователей 1С:Предприятие"
+
+#. module: access_1c_rules
+#: model:ir.actions.act_window,name:access_1c_rules.action_acs1crules_act_window
+msgid "Access rules for 1C:Enterprise"
+msgstr "Правила доступа для 1С:Предприятие"
+
+#. module: access_1c_rules
+#: model:ir.actions.act_window,name:access_1c_rules.action_acs1crules_usrgrp_act_window
+msgid "Access user groups"
+msgstr "Группы доступа"
+
+#. module: access_1c_rules
+#: model:ir.model.fields.selection,name:access_1c_rules.selection__acs1crules_usr1crules__objectType__doclandedcosts
+msgid "Additional (landed) costs income"
+msgstr "Расходы на себестоимость"
+
+#. module: access_1c_rules
+#: model:ir.model.fields.selection,name:access_1c_rules.selection__acs1crules_usr1crules__checkVariant__backdatedediting
+msgid "Back date editing"
+msgstr "Редактирование задним числом"
+
+#. module: access_1c_rules
+#: model:ir.model.fields,field_description:access_1c_rules.field_acs1crules_usr1crules__checkVariant
+#: model_terms:ir.ui.view,arch_db:access_1c_rules.rules1c_structure
+msgid "Check variant"
+msgstr "Вариант проверки"
+
+#. module: access_1c_rules
+#: model:ir.model.fields,field_description:access_1c_rules.field_acs1crules_usr1crules__objectType
+msgid "Controlled object in the 1C"
+msgstr "Контролируемый объект в 1С:Предприятие"
+
+#. module: access_1c_rules
+#: model:ir.model.fields,field_description:access_1c_rules.field_acs1crules_users1c__create_uid
+#: model:ir.model.fields,field_description:access_1c_rules.field_acs1crules_users1c_groups__create_uid
+#: model:ir.model.fields,field_description:access_1c_rules.field_acs1crules_usr1crules__create_uid
+msgid "Created by"
+msgstr "Создан"
+
+#. module: access_1c_rules
+#: model:ir.model.fields,field_description:access_1c_rules.field_acs1crules_users1c__create_date
+#: model:ir.model.fields,field_description:access_1c_rules.field_acs1crules_users1c_groups__create_date
+#: model:ir.model.fields,field_description:access_1c_rules.field_acs1crules_usr1crules__create_date
+msgid "Created on"
+msgstr "Создан"
+
+#. module: access_1c_rules
+#: model:ir.model.fields.selection,name:access_1c_rules.selection__acs1crules_usr1crules__objectType__doccustomersorder
+msgid "Customer's order"
+msgstr "Заказ покупателя"
+
+#. module: access_1c_rules
+#: model:ir.model.fields.selection,name:access_1c_rules.selection__acs1crules_usr1crules__objectType__doccustomerreturn
+msgid "Customer's return"
+msgstr "Возврат покупателя"
+
+#. module: access_1c_rules
+#: model:ir.model.fields,field_description:access_1c_rules.field_acs1crules_users1c__display_name
+#: model:ir.model.fields,field_description:access_1c_rules.field_acs1crules_users1c_groups__display_name
+#: model:ir.model.fields,field_description:access_1c_rules.field_acs1crules_usr1crules__display_name
+msgid "Display Name"
+msgstr "Отображаемое имя"
+
+#. module: access_1c_rules
+#: model:ir.module.category,description:access_1c_rules.module_category_acs1crules
+msgid "Extended 1C:Enterprise permissions provider"
+msgstr "Поддержка расширенных прав доступа"
+
+#. module: access_1c_rules
+#: model:ir.model,name:access_1c_rules.model_acs1crules_usr1crules
+msgid "External user permissions checking for 1C:Enterprise"
+msgstr "Внешняя проверка прав доступа для 1С:Предприятие"
+
+#. module: access_1c_rules
+#: model:ir.model.fields,field_description:access_1c_rules.field_acs1crules_users1c_groups__users1c_ids
+msgid "Group members"
+msgstr "Члены группы"
+
+#. module: access_1c_rules
+#: model:ir.model.fields,field_description:access_1c_rules.field_acs1crules_users1c__id
+#: model:ir.model.fields,field_description:access_1c_rules.field_acs1crules_users1c_groups__id
+#: model:ir.model.fields,field_description:access_1c_rules.field_acs1crules_usr1crules__id
+msgid "ID"
+msgstr "ID"
+
+#. module: access_1c_rules
+#: model:ir.model.fields.selection,name:access_1c_rules.selection__acs1crules_usr1crules__objectType__docincomecashorder
+msgid "Income cash order"
+msgstr "Приходный кассовый ордер"
+
+#. module: access_1c_rules
+#: model:ir.model.fields,field_description:access_1c_rules.field_acs1crules_users1c__id_1c
+msgid "Internal user code (as in 1C:Enterprise database)"
+msgstr "Код пользователя (как в БД 1С:Предприятия)"
+
+#. module: access_1c_rules
+#: model:ir.model.fields.selection,name:access_1c_rules.selection__acs1crules_usr1crules__objectType__docinvoice
+msgid "Invoice recieved"
+msgstr "Счёт-фактура полученный"
+
+#. module: access_1c_rules
+#: model:ir.model.fields,field_description:access_1c_rules.field_acs1crules_users1c____last_update
+#: model:ir.model.fields,field_description:access_1c_rules.field_acs1crules_users1c_groups____last_update
+#: model:ir.model.fields,field_description:access_1c_rules.field_acs1crules_usr1crules____last_update
+msgid "Last Modified on"
+msgstr "Дата изменения"
+
+#. module: access_1c_rules
+#: model:ir.model.fields,field_description:access_1c_rules.field_acs1crules_users1c__write_uid
+#: model:ir.model.fields,field_description:access_1c_rules.field_acs1crules_users1c_groups__write_uid
+#: model:ir.model.fields,field_description:access_1c_rules.field_acs1crules_usr1crules__write_uid
+msgid "Last Updated by"
+msgstr "Обновил"
+
+#. module: access_1c_rules
+#: model:ir.model.fields,field_description:access_1c_rules.field_acs1crules_users1c__write_date
+#: model:ir.model.fields,field_description:access_1c_rules.field_acs1crules_users1c_groups__write_date
+#: model:ir.model.fields,field_description:access_1c_rules.field_acs1crules_usr1crules__write_date
+msgid "Last Updated on"
+msgstr "Обновлено"
+
+#. module: access_1c_rules
+#: model:ir.model.fields.selection,name:access_1c_rules.selection__acs1crules_usr1crules__objectType__docstockmoveitems
+msgid "Move Items (in stock)"
+msgstr "Перемещение товаров"
+
+#. module: access_1c_rules
+#: model_terms:ir.ui.view,arch_db:access_1c_rules.rules1c_structure
+msgid "Object type"
+msgstr "Тип объекта"
+
+#. module: access_1c_rules
+#: model:ir.model.fields.selection,name:access_1c_rules.selection__acs1crules_usr1crules__objectType__docordertosupplier
+msgid "Order to supplier"
+msgstr "Заказ поставщику"
+
+#. module: access_1c_rules
+#: model:ir.model.fields.selection,name:access_1c_rules.selection__acs1crules_usr1crules__objectType__docothercosts
+msgid "Other costs"
+msgstr "Прочие затраты"
+
+#. module: access_1c_rules
+#: model:ir.model.fields.selection,name:access_1c_rules.selection__acs1crules_usr1crules__objectType__docoutgoingcashorder
+msgid "Outgoing cash order"
+msgstr "Расходный кассовый ордер"
+
+#. module: access_1c_rules
+#: model:ir.model.fields.selection,name:access_1c_rules.selection__acs1crules_usr1crules__objectType__docpowerofattorney
+msgid "Power of attorney"
+msgstr "Доверенность"
+
+#. module: access_1c_rules
+#: model:ir.model.fields,field_description:access_1c_rules.field_acs1crules_usr1crules__rulePriority
+msgid "Priority level"
+msgstr "Уровень приоритета"
+
+#. module: access_1c_rules
+#: model:ir.model.fields.selection,name:access_1c_rules.selection__acs1crules_usr1crules__objectType__refproducts
+msgid "Products"
+msgstr "Номенклатура"
+
+#. module: access_1c_rules
+#: model:ir.model.fields.selection,name:access_1c_rules.selection__acs1crules_usr1crules__objectType__docproductspurchaseorder
+msgid "Purchase order"
+msgstr "Заказ покупателя"
+
+#. module: access_1c_rules
+#: model:ir.model.fields.selection,name:access_1c_rules.selection__acs1crules_usr1crules__ruleType__ruleallow
+msgid "Rule allows access"
+msgstr "Разрешающее правило"
+
+#. module: access_1c_rules
+#: model:ir.model.fields.selection,name:access_1c_rules.selection__acs1crules_usr1crules__ruleType__ruledeny
+msgid "Rule denies access"
+msgstr "Запрещающее правило"
+
+#. module: access_1c_rules
+#: model:ir.model.fields,field_description:access_1c_rules.field_acs1crules_usr1crules__name
+#: model_terms:ir.ui.view,arch_db:access_1c_rules.rules1c_structure
+msgid "Rule name"
+msgstr "Наименование правила"
+
+#. module: access_1c_rules
+#: model:ir.model.fields,field_description:access_1c_rules.field_acs1crules_usr1crules__ruleType
+#: model_terms:ir.ui.view,arch_db:access_1c_rules.rules1c_structure
+msgid "Rule type"
+msgstr "Тип правила"
+
+#. module: access_1c_rules
+#: model:ir.model.fields,field_description:access_1c_rules.field_acs1crules_usr1crules__rules_total
+#: model_terms:ir.ui.view,arch_db:access_1c_rules.acs1crules_form_view
+msgid "Rules total"
+msgstr "Всего правил"
+
+#. module: access_1c_rules
+#: model:ir.model.fields.selection,name:access_1c_rules.selection__acs1crules_usr1crules__objectType__docproductssaleorder
+msgid "Sales order"
+msgstr "Реализация товаров, услуг"
+
+#. module: access_1c_rules
+#: model:ir.model.fields,field_description:access_1c_rules.field_acs1crules_usr1crules__ruleNumValue
+msgid "Value of the rule (number)"
+msgstr "Значение (число)"
+
+#. module: access_1c_rules
+#: model:ir.model.fields,field_description:access_1c_rules.field_acs1crules_usr1crules__ruleStrValue
+msgid "Value of the rule (string)"
+msgstr "Значение (строка)"
+
+#. module: access_1c_rules
+#: model:ir.model.fields.selection,name:access_1c_rules.selection__acs1crules_usr1crules__checkVariant__writepermission
+msgid "Write access permission"
+msgstr "Разрешение на запись"
+
+#. module: access_1c_rules
+#: model:ir.model.fields.selection,name:access_1c_rules.selection__acs1crules_usr1crules__objectType__docwriteofforpostingitems
+msgid "Write off or Posting Items (in stock)"
+msgstr "Списание или оприходование товаров"
+
+#. module: access_1c_rules
+#: model_terms:ir.ui.view,arch_db:access_1c_rules.rules1c_structure
+msgid "accum."
+msgstr "всего:"

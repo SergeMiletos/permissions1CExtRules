@@ -1,0 +1,29 @@
+<odoo>
+	<data>
+		<!-- actions opening views on models -->
+		<record model="ir.actions.act_window" id="action_acs1crules_act_window">
+			<field name="name">Access rules for 1C:Enterprise</field>
+			<field name="res_model">acs1crules.usr1crules</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+		
+		<record model="ir.actions.act_window" id="action_acs1cusers_act_window">
+			<field name="name">1C:Enterprise users list</field>
+			<field name="res_model">acs1crules.users1c</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_acs1crules_usrgrp_act_window">
+			<field name="name">Access user groups</field>
+			<field name="res_model">acs1crules.users1c_groups</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<menuitem name="1C:Enterprise access rules provider" id="acs1crules_menu_root" sequence="3" action="action_acs1crules_act_window" />
+		<menuitem name="1C:Enterprise users" id="acs1crules_menu_users" parent="acs1crules_menu_root" sequence="0"
+			action="action_acs1cusers_act_window" />
+
+		<menuitem name="1C:Enterprise user groups" id="acs1crules_menu_usersgroups" parent="acs1crules_menu_root" sequence="1" 
+		    action="action_acs1crules_usrgrp_act_window"/>
+	</data>
+</odoo>
