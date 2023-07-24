@@ -21,6 +21,7 @@ Then, analysing this list, a decision is made as to whether or not to allow acce
 The return value False is considered to allow action and True is considered to deny it respectively.
 Addon is experimental and in "proof-of-concept" state, so it is not recommended to use it on real databases without thorough testing.
 
+View Mermaid-diagrams at: https://mermaid.live/
 JSON request format example:
 
 {
