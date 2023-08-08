@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="paperformat_A4_landscape" model="report.paperformat">
+	<field name="name">A4 Landscape</field>
+	<field name="format">A4</field>
+	<field name="orientation">Landscape</field>
+	<field name="margin_top">40</field>
+	<field name="margin_bottom">32</field>
+	<field name="margin_left">7</field>
+	<field name="margin_right">7</field>
+	<field name="header_line" eval="False"/>
+	<field name="header_spacing">35</field>
+	<field name="dpi">90</field>
+    </record>
+    
+    <record id="action_acs1crules_reportDoubleTable" model="ir.actions.report">
+    <field name="name">1C:Enterprise access rules report with double tables</field>
+    <field name="model">acs1crules.usr1crules</field>
+    <field name="report_type">qweb-html</field>
+    <field name="report_name">access_1c_rules.acs1crules_rules1c_report_doubletable</field>
+    <field name="paperformat_id" ref="paperformat_A4_landscape"/>
+<!--     <field name="binding_model_id" ref="model_acs1crules_usr1crules"/> -->
+    <field name="binding_type">report</field>
+    </record>
+
+    <template id="acs1crules_rules1c_report_doubletable">
+	<t t-call="web.html_container">
+    <style>
+        html *  {  
+        font-family: Times and Roman;
+        } <!-- 	    .thead th { -->
+<!-- 	        background-color: #006DCC; -->
+<!--             color: white; -->
+<!--         } -->
+        .table td {
+            padding: 1px;
+        }
+<!--  .bg-image_tb {  -->
+<!--     width: 100%;  -->
+<!--     height: 120px;  -->
+<!--     background-image: url("/access_1c_rules/static/src/img/emptyLogo.png"); -->
+<!--     background-size: 100% 100%;   -->
+<!--     background-repeat: no-repeat; -->
+<!-- height: 50vh; -->
+<!--     top: 50%; -->
+<!--     left: 0; right: 0; transform: translateY(-50%); -->
+<!-- }  -->
+        </style>
+	        <div class="page">
+		    <div class="container">
+                <div class="row">
+                    <div class="col-12 mw-100 d-flex pl-0 pr-0 pt-5 pb-5 justify-content-between" style="background-image: linear-gradient(to right, orange , white); background-clip: content-box">
+	                    <div class="col-4 w-50 align-self-center" >
+<!-- 	                        style="opacity: 0.8;"  -->
+	                        <img src="/access_1c_rules/static/src/img/circle-logo-template-empty-logo.jpg" class="ml-2 mt-n4 mb-n4 border border-2" alt="Cinque Terre" width="50%" style="opacity: 0.8;"/>
+	                    </div> 
+				        <div class="col-4 p-0 text-center align-self-center" style="font-size: 30px;">
+                            <p class="p-0 m-0">Access rules<br/>report</p>
+				        </div>
+					    <div class="col-4 text-muted text-right align-self-center"  style="font-size: 12px;">
+	    				    Other<br/> writings
+	                    </div>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-between">                
+                    <div class="bg-image" style="background-image: url('/access_1c_rules/static/src/img/emptyLogo.png'); background-repeat: no-repeat; background-position: center;">
+                        <table class="table mv-100 table-bordered" style="background-color: rgba(255, 255, 255, 0.8); ">
+                            <thead class="table-success">
+                                <tr>
+                                    <th >#</th>
+                                    <th class="text-center">Object type</th>
+                                    <th class="text-center">Rules count</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-set="fdocs" t-value="docs"/>
+                                <t t-set="objUsed" t-value="[]"/>
+                                <t t-foreach="fdocs" t-as="item">
+                                    <t t-set="resultd" t-value="objUsed.append(item.objectType)"/>
+                                </t>
+                                <t t-set="i" t-value="1"/>
+                                <t t-set="objDict" t-value="{}"/>
+                                <t t-foreach="fdocs" t-as="item">
+                                    <t t-if="item.objectType not in objDict">
+                                        <t t-set="resultd" t-value="objDict.update({item.objectType:True})"/>
+										<tr>
+										  <td style="text-align:center;">
+										     <p t-esc="i" />
+										  </td>
+										  <td>
+										      <p t-field="item.objectType" />
+										  </td>
+										   <td style="text-align:right;">
+										      <p t-esc="objUsed.count(item.objectType)" />
+										  </td>
+										</tr>
+                                        <t t-set="i" t-value="i+1"/>
+                                    </t>
+                                </t>
+                           </tbody>
+                        </table>    
+                    </div>
+                    <div class="col-2 mw-100"><p></p></div>
+                    <div class="bg-image" style="background-image: url('/access_1c_rules/static/src/img/emptyLogo.png'); background-repeat: no-repeat; background-position: center;">
+                        <table class="table mv-100 table-bordered" style="background-color: rgba(255, 255, 255, 0.8); ">
+                            <thead class="table-success">
+                                <tr>
+                                    <th >#</th>
+                                    <th class="text-center">Group</th>
+                                    <th class="text-center">Users</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-set="fdocs" t-value="docs"/>
+                                <t t-set="objUsed" t-value="[]"/>
+                                <t t-foreach="fdocs" t-as="item">
+                                    <t t-set="resultd" t-value="objUsed.append(item.access1CGroup_ids)"/>
+                                </t>
+                                <t t-set="objDict" t-value="{}"/>
+                                <t t-foreach="fdocs" t-as="item">
+	                                <t t-set="usersList" t-value="[]"/>
+                                    <t t-foreach="item.access1CGroup_ids" t-as="fieldm2m">
+	                                    <t t-if="fieldm2m not in objDict">
+	                                        <t t-foreach="fieldm2m.users1c_ids" t-as="usersid">
+	                                           <t t-set="emptyd" t-value="usersList.append(usersid.name)"/>
+	                                        </t>
+                                            <t t-set="resultd" t-value="objDict.update({fieldm2m: ','.join(usersList)})"/>
+	                                    </t>
+                                    </t>
+                                </t>
+                                <t t-set="i" t-value="1"/>
+                                <t t-foreach="objDict.keys()" t-as="DictKey">
+	                                        <tr>
+	                                          <td style="text-align:center;">
+	                                             <p t-esc="i" />
+	                                          </td>
+	                                          <td>
+	                                              <p t-field="DictKey.name" />
+	                                          </td>
+	                                           <td style="text-align:right;">
+	                                              <p t-esc="objDict.get(DictKey)" />
+	                                          </td>
+	                                        </tr>
+	                                        <t t-set="i" t-value="i+1"/>
+	                           </t>
+                           </tbody>
+                        </table>    
+                    </div>
+
+                </div>
+				<div class="row" style="background-color: orange">
+				    <div class="col-4 border">Rule name</div>
+				    <div class="col-2 border">Object type</div>
+				    <div class="col-2 border">Rule type</div>
+				    <div class="col-2 border">Check variant</div>
+				    <div class="col-2 border">Access groups</div>
+				</div>
+			<t t-set="rec_count" t-value="0"/>
+			<t t-foreach="docs" t-as="o">
+			    <t t-set="rec_count" t-value="rec_count + 1"/>
+			    <div class="row">
+						<div class="col-4">
+						    <span t-field="o.name"/>
+						    <p>accum. <t t-out="rec_count"/>)</p>
+						</div>
+						<div class="col-2">
+						    <t t-if="o.objectType">
+						        <span t-esc="dict(o.fields_get(allfields=['objectType'])['objectType']['selection'])[o.objectType]"/>
+						    </t>
+						    <t t-if="not o.objectType">
+							<span t-esc="'-- does not selected --'"/>
+						    </t>
+						</div>
+		 				<div class="col-2">
+						    <span t-field="o.ruleType"/>
+						</div>
+						<div class="col-2">
+						    <span t-field="o.checkVariant"/>
+						</div>
+					    <div class="col-2">
+					    	    <span t-field="o.access1CGroup_ids"/>
+						   </div>
+					</div>
+<!--             t-foreach  -->
+			</t>
+		    </div>
+		</div>
+	    </t>
+    </template>
+</odoo>

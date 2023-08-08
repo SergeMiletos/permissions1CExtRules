@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-    <record id="paperformat_euro_landscape" model="report.paperformat">
+    <record id="paperformat_A4_landscape" model="report.paperformat">
 	<field name="name">A4 Landscape</field>
 	<field name="format">A4</field>
 	<field name="orientation">Landscape</field>
@@ -12,19 +12,29 @@
 	<field name="header_spacing">35</field>
 	<field name="dpi">90</field>
     </record>
+    
+    <record id="action_acs1crules_report" model="ir.actions.report">
+    <field name="name">1C:Enterprise access rules report</field>
+    <field name="model">acs1crules.usr1crules</field>
+    <field name="report_type">qweb-pdf</field>
+    <field name="report_name">access_1c_rules.acs1crules_rules1c_report</field>
+    <field name="paperformat_id" ref="paperformat_A4_landscape"/>
+    <field name="binding_model_id" ref="model_acs1crules_usr1crules"/>
+    <field name="binding_type">report</field>
+    </record>
 
-    <template id="rules1c_structure">
+    <template id="acs1crules_rules1c_report">
 	<t t-call="web.html_container">
 	    <t t-call="web.external_layout">
 	        <div class="page">
 		    <div class="container">
-	    	        <div class="row bg-primary">
-		    	    <div class="col-4">Rule name</div>
+	    	  <div class="row bg-primary">
+		    	<div class="col-4">Rule name</div>
 			    <div class="col-2">Object type</div>
 			    <div class="col-2">Rule type</div>
 			    <div class="col-2">Check variant</div>
 			    <div class="col-2">Access groups</div>
-			</div>
+			 </div>
 			<t t-set="rec_count" t-value="0"/>
 			<t t-foreach="docs" t-as="o">
 			    <t t-set="rec_count" t-value="rec_count + 1"/>
@@ -49,8 +59,11 @@
 				</div>
 			        <div class="col-2">
 			    	    <span t-field="o.access1CGroup_ids"/>
-				</div>
-			    </div>
+				   </div>
+			 </div>
+			 <div class="col-6">
+			 </div>
+            /* t-foreach */
 			</t>
 		    </div>
 		</div>
@@ -58,13 +71,4 @@
 	</t>
     </template>
 
-    <record id="action_acs1crules_report" model="ir.actions.report">
-	<field name="name">1C:Enterprise access rules report</field>
-	<field name="model">acs1crules.usr1crules</field>
-	<field name="report_type">qweb-pdf</field>
- 	<field name="report_name">acs1crules.rules1c_structure</field>
-	<field name="paperformat_id" ref="paperformat_euro_landscape"/>
-	<field name="binding_model_id" ref="model_acs1crules_usr1crules"/>
-	<field name="binding_type">report</field>
-    </record>
 </odoo>

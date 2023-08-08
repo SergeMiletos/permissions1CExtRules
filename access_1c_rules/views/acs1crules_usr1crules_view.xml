@@ -1,15 +1,20 @@
 <odoo>
     <data>
 	<record id="acs1crules_tree_view" model="ir.ui.view" >
-    	    <field name="model">acs1crules.usr1crules</field>
+   	    <field name="model">acs1crules.usr1crules</field>
 	    <field name="type">tree</field>
 	    <field name="arch" type="xml">
-		<field name="name" />
-		<field name="objectType" />
-		<field name="ruleNumValue" colspan="4"/>
-		<field name="ruleStrValue" />
-		<field name="ruleType" />
-		<field name="access1CGroup_ids" widget="many2many_tags"/>
+		     <tree string="Tree view">
+<!-- 		       <header> -->
+<!-- 		            <button name="buttReport" string="Report" class="oe_highlight"  type="object" attrs="{'js_class': 'button_in_tree_new',}"/>
+ --><!-- 		       </header> -->
+				<field name="name" />
+				<field name="objectType" />
+				<field name="ruleNumValue" colspan="4"/>
+				<field name="ruleStrValue" />
+				<field name="ruleType" />
+				<field name="access1CGroup_ids" widget="many2many_tags"/>
+		    </tree>
 	    </field>
 	</record>
 

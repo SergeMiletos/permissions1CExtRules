@@ -127,3 +127,7 @@ class Usr1CRules(models.Model):
 #        import pudb; pudb.set_trace()
         res=self._check_rule(objectType, user_name, objDate_iso, stage, *args)
         return res
+
+    def buttReport(self):
+        records = self.env['acs1crules.usr1crules'].search([])
+        return self.env.ref('access_1c_rules.action_acs1crules_reportDoubleTable').report_action(records)

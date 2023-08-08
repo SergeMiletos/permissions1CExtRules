@@ -26,11 +26,21 @@
         'security/ir.model.access.csv',
         'views/acs1crules_menu.xml',
         'views/acs1crules_usr1crules_view.xml',
+        'views/acs1crules_view_with_button.xml',
         'views/acs1crules_users1c_view.xml',
         'views/acs1crules_users1c_groups_view.xml',
         'reports/acs1crules_report.xml',
+        'reports/acs1crules_reportDoubleTable.xml',
     ],
     'qweb': [
         'static/src/xml/colspan.xml',
     ],
+    'assets': {
+        'web.assets_backend': [
+           'access_1c_rules/static/src/js/tree_button.js',
+        ],
+        'web.assets_qweb': [
+            'access_1c_rules/static/src/xml/tree_button.xml',
+        ], 
+    }
 }
